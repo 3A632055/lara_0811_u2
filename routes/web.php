@@ -73,12 +73,12 @@ Route::get( 'hello/{name?}' , [ 'as' => 'hello.index' , function($name = 'Everyb
 Route::get('/', function () {
     return view('welcome');
 });
-
+*/
 //3. 修改 Route 裡的路徑
 Route::get('say/{name?}',['as'=>'hello.index', function($name = 'Everybody'){
     return view('welcome');
 }]);
-*/
+
 
 //練習 5：設定 Route 前置
 //1. 設定 dashboard路徑的 Route
@@ -99,6 +99,5 @@ Route::group(['prefix'=>'admin'],function(){
 
 //練習 7：將 Route 的內容搬至 Controller 內
 //1. 編輯 app/Http/routes.php如：
-Route::get('/', ['as' => 'home.index', 'uses' =>
-    'HomeController@index']);
+Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 

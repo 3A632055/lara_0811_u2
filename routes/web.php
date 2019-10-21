@@ -81,6 +81,15 @@ Route::get('say/{name?}',['as'=>'hello.index', function($name = 'Everybody'){
 
 //練習 5：設定 Route 前置
 //1. 設定 dashboard路徑的 Route
+/*
 Route::get('dashboard',function(){
     return 'dashboard';
+});
+*/
+
+//2. 設定另一個 Route 以群組包起來設定 prefix
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('dashboard',function(){
+        return 'admin dashboard';
+    });
 });

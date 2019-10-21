@@ -53,7 +53,15 @@ Route::get( 'hello/{name?}', function($name = 'Everybody') {
 
 //練習 3：使用 artisan 指令了解目前 route 內容
 //3. 增加新的 Route
+/*
 Route::get( 'hello/{name?}', function($name = 'JiaXing') {
     return 'Hello, '.$name;
 });
+*/
+
+//練習 4：為 Route 命名
+//1. 將 Route 取名為 hello.index
+Route::get( 'hello/{name?}' , [ 'as' => 'hello.index' , function($name = 'Everybody') {
+    return 'Hello, '.$name;
+}]);
 

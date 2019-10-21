@@ -68,6 +68,7 @@ Route::get( 'hello/{name?}' , [ 'as' => 'hello.index' , function($name = 'Everyb
 */
 
 //2. 修改 resources/views/welcome.blade.php的內容，增加一個連結
+/*
 Route::get('/', function () {
     return view('welcome');
 });
@@ -76,3 +77,10 @@ Route::get('/', function () {
 Route::get('say/{name?}',['as'=>'hello.index', function($name = 'Everybody'){
     return view('welcome');
 }]);
+*/
+
+//練習 5：設定 Route 前置
+//1. 設定 dashboard路徑的 Route
+Route::get('dashboard',function(){
+    return 'dashboard';
+});

@@ -61,7 +61,15 @@ Route::get( 'hello/{name?}', function($name = 'JiaXing') {
 
 //練習 4：為 Route 命名
 //1. 將 Route 取名為 hello.index
+
 Route::get( 'hello/{name?}' , [ 'as' => 'hello.index' , function($name = 'Everybody') {
     return 'Hello, '.$name;
 }]);
+
+
+//2. 修改 resources/views/welcome.blade.php的內容，增加一個連結
+Route::get('/', function () {
+    return view('welcome');
+});
+
 

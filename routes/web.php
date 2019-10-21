@@ -32,8 +32,14 @@ Route::get('/', function() {
 */
 
 //3. 設定 Route 跳轉頁面
-
+/*
  Route::get('/', function() {
     return redirect('welcome');
 });
+*/
 
+//練習 2：設定 Route 接收參數
+//1. 修改 Route 接受參數
+Route::get( 'hello/{name}', function($name) {
+    return 'Hello, '.$name;
+});

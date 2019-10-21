@@ -43,3 +43,9 @@ Route::get('/', function() {
 Route::get( 'hello/{name}', function($name) {
     return 'Hello, '.$name;
 });
+
+//3. 修改參數成選擇性
+Route::get( 'hello/{name?}', function($name = 'Everybody') {
+    return 'Hello, '.$name;
+});
+

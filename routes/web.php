@@ -33,11 +33,15 @@ Route::get('/', function() {
 */
 
 //3. 設定 Route 跳轉頁面
-/*
+
  Route::get('/', function() {
     return redirect('welcome');
 });
-*/
+
+//修改 Route 接受參數
+ Route::get('welcome', function() {
+    return view('welcome');
+});
 
 //練習 2：設定 Route 接收參數
 /*
